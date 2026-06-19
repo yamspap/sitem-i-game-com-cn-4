@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #faf9f8;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      color: #222;
+      line-height: 1.7;
+      padding: 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+      margin: 2rem auto 4rem auto;
+    }
+
+    /* 极简留白、窄正文宽度 */
+    .hero {
+      margin-bottom: 2.8rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1e1e1e;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #5c5c5c;
+      max-width: 560px;
+      border-left: 3px solid #c8b6a0;
+      padding-left: 1.2rem;
+    }
+
+    section {
+      margin-bottom: 2.6rem;
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: #2b2b2b;
+      border-bottom: 1px solid #e0dbd4;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 1.15rem;
+      margin: 1.2rem 0 0.4rem 0;
+      color: #3f3f3f;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #3c3c3c;
+    }
+
+    .highlight-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+    }
+
+    .highlight-list li {
+      background: #f2efe9;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      color: #3f3f3f;
+    }
+
+    .card-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1rem 0 1.6rem 0;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e6dfd6;
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-weight: 500;
+    }
+
+    .card p {
+      font-size: 0.96rem;
+      color: #4f4f4f;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+      color: #1f1f1f;
+    }
+
+    .note-box {
+      background: #f6f3ee;
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      border-left: 4px solid #b7a997;
+      margin: 1.8rem 0;
+    }
+
+    a {
+      color: #3b5e5b;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #b6c9c5;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: #1f403d;
+      text-decoration-color: #1f403d;
+    }
+
+    .footer-note {
+      margin-top: 3rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #ddd6cd;
+      font-size: 0.85rem;
+      color: #7a7a7a;
+      text-align: center;
+    }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        padding-left: 0.9rem;
+      }
+
+      .card {
+        padding: 1rem;
+      }
+
+      body {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <h1>爱游戏 · 游戏生活站点</h1>
+      <p>一个围绕游戏体验、内容沉淀与玩家交流的轻量信息站，保持朴素与真诚的分享节奏。</p>
+    </div>
+
+    <!-- 站点说明 / 摘要 -->
+    <section>
+      <h2>关于这个站点</h2>
+      <p>
+        <a href="https://sitem-i-game.com.cn">爱游戏</a> 是一个个人维护的游戏主题站点，不刻意追逐热点，也不依赖浮夸标题。站内内容以游戏笔记、玩法解读、作品感悟为主，适合对游戏本身抱有好奇与尊重的读者。
+      </p>
+      <p>
+        没有弹窗广告、没有强制跳转，也没有隐藏式引导。你在这里看到的每段文字，出发点都是“分享真实感受”，而非诱导行为。
+      </p>
+    </section>
+
+    <!-- 亮点 / 特色 -->
+    <section>
+      <h2>站点的几个特点</h2>
+      <ul class="highlight-list">
+        <li>无干扰阅读</li>
+        <li>独立视角</li>
+        <li>克制更新</li>
+        <li>不追踪用户</li>
+        <li>纯静态页面</li>
+      </ul>
+      <div class="card-group">
+        <div class="card">
+          <h3>无广告 · 无跟踪</h3>
+          <p>整个站点不使用第三方分析脚本、不投放广告、不收集个人信息。你打开这个页面，就只是看内容而已。</p>
+        </div>
+        <div class="card">
+          <h3>内容风格</h3>
+          <p>以个人体验为起点，不代替用户做决定。每一篇文章都标注了主观立场，适合自己判断是否参考。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使用建议 / 场景 -->
+    <section>
+      <h2>你可以怎么用</h2>
+      <p>
+        如果你正在找一款游戏的客观印象，或想看看其他玩家对某部作品的真实评价，不妨在 <a href="https://sitem-i-game.com.cn">爱游戏</a> 里翻一翻。没有评分绑架，也没有排名焦虑。
+      </p>
+      <p>
+        更适合在放松时随便读，不需要注册、不需要登录，也不会有“你可能会喜欢”的推送。
+      </p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+      <h2>常见疑问摘要</h2>
+      <div class="faq-item">
+        <strong>内容更新频率？</strong>
+        <p>不定期更新。站主按照自己的游戏节奏来写，不赶档期，也不搞定时发布。偶尔一个月两三篇，也可能一周一篇。</p>
+      </div>
+      <div class="faq-item">
+        <strong>是否接受投稿或合作？</strong>
+        <p>目前站点定位为独立个人站，暂不开放投稿。如果你有想要分享的内容，可以自己搭建站点——这个完全由静态页面构成，任何人都可以做到。</p>
+      </div>
+      <div class="faq-item">
+        <strong>站点未来会变吗？</strong>
+        <p>会保持现在的轻量风格。如果有大的调整，会在站内简单说明，但不变的是：没有注册、没有付费墙、没有算法推荐。</p>
+      </div>
+    </section>
+
+    <!-- 可信但克制的访问说明 -->
+    <div class="note-box">
+      <strong style="display:block; margin-bottom:0.3rem; font-weight:500;">一个简单的提醒</strong>
+      <p style="margin-bottom:0;">
+        无论你在哪个网站看到推荐，都建议先用自己的方式确认信息。这个站点唯一的外部链接就是它自己——<a href="https://sitem-i-game.com.cn">爱游戏</a>。没有联盟链接、没有返利、没有推广参数。
+      </p>
+    </div>
+
+    <div class="footer-note">
+      <p>内容均来自个人体验 · 不构成购买或游玩建议 · 请以自己的感受为准</p>
+    </div>
+  </div>
+</body>
+</html>

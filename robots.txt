@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yamspap.github.io/sitem-i-game-com-cn-4/sitemap.xml
