@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再次翻阅 · 雷火电竞</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fbfbf9;
+            font-family: "Segoe UI", "Helvetica Neue", system-ui, -apple-system, sans-serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            padding: 3rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 标题区 类似笔记本内页 */
+        .page-header {
+            border-bottom: 1px solid #e1ddd8;
+            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.2rem;
+            font-weight: 380;
+            letter-spacing: -0.01em;
+            color: #171717;
+            line-height: 1.2;
+            margin-bottom: 0.2rem;
+        }
+
+        .page-header .sub-note {
+            font-size: 0.9rem;
+            color: #7d7a74;
+            font-weight: 350;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: #9b978f;
+            margin: 1.5rem 0 0.2rem 0;
+            letter-spacing: 0.02em;
+        }
+
+        .post-title {
+            font-size: 1.8rem;
+            font-weight: 360;
+            line-height: 1.3;
+            margin: 0.3rem 0 0.6rem 0;
+            color: #1a1a1a;
+        }
+
+        .post-excerpt {
+            font-size: 1rem;
+            color: #4a4844;
+            background: #f4f2ee;
+            padding: 1.2rem 1.5rem;
+            border-radius: 18px;
+            margin: 1.8rem 0 2.2rem 0;
+            quotes: "“" "”" "‘" "’";
+        }
+
+        .post-excerpt::before {
+            content: "▎ ";
+            font-size: 1.4rem;
+            color: #b3aa9e;
+        }
+
+        .post-content p {
+            margin-bottom: 1.4rem;
+            font-weight: 350;
+            font-size: 1.02rem;
+            color: #242220;
+        }
+
+        .post-content p.inset-quote {
+            margin-left: 1rem;
+            padding-left: 1.2rem;
+            border-left: 3px solid #cfc8bf;
+            color: #5a5750;
+            font-style: normal;
+            font-size: 0.98rem;
+        }
+
+        .post-content a {
+            color: #2a5c7a;
+            text-decoration: none;
+            border-bottom: 1px solid #c7d6de;
+            transition: border 0.1s ease;
+        }
+
+        .post-content a:hover {
+            border-bottom: 1px solid #2a5c7a;
+        }
+
+        .pull-quote {
+            background: #f0ede8;
+            border-radius: 24px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.4rem 0 2rem 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .pull-quote span.icon {
+            display: inline-block;
+            margin-right: 0.2rem;
+            font-size: 1.4rem;
+            color: #a39a8e;
+        }
+
+        .faq-cluster {
+            margin: 3rem 0 2.5rem 0;
+            border-top: 1px solid #e8e3dd;
+            padding-top: 1.8rem;
+        }
+
+        .faq-cluster h3 {
+            font-weight: 380;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #2b2b2b;
+        }
+
+        .faq-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .faq-q {
+            font-weight: 450;
+            font-size: 0.98rem;
+            color: #36332e;
+        }
+
+        .faq-a {
+            font-size: 0.94rem;
+            color: #5d5951;
+            padding-left: 0.5rem;
+        }
+
+        .return-note {
+            font-size: 0.94rem;
+            background: #f9f7f4;
+            padding: 1.2rem 1.6rem;
+            border-radius: 40px 12px 12px 40px;
+            border-left: 6px solid #c0b6a9;
+            margin: 2.2rem 0;
+        }
+
+        .footer-meta {
+            border-top: 1px solid #e1ddd8;
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            font-size: 0.85rem;
+            color: #8e8980;
+        }
+
+        .footer-meta a {
+            color: #3b5a6b;
+            border-bottom: none;
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 2rem 1.2rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.7rem;
+            }
+
+            .post-title {
+                font-size: 1.4rem;
+            }
+
+            .post-excerpt {
+                padding: 1rem 1.2rem;
+            }
+
+            .pull-quote {
+                padding: 1.3rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 简洁头部 -->
+    <div class="page-header">
+        <h1>雷火电竞 · 记录</h1>
+        <div class="sub-note">持续关注 · 回到同一处</div>
+    </div>
+
+    <!-- 博客式文章 -->
+    <div class="post-meta">2025 年春 · 重读笔记</div>
+    <h2 class="post-title">再次打开收藏夹，它还在那里</h2>
+
+    <div class="post-excerpt">
+        有些页面，你知道自己会反复回来。不是因为它热闹，而是因为它安静、稳定，值得你给予一份持续的留意。
+    </div>
+
+    <div class="post-content">
+        <p>
+            很多年前开始，我就养成了一个习惯：把真正需要长期关注的地方，单独保存在浏览器书签栏里。那些链接隔一段时间就会被清理一次，但是有几个始终留着。
+            <a href="https://official-leihuoesports.com">雷火电竞</a> 就是其中之一。不是因为它做了多么惊动视线的推广，而是每次打开，它都保持着那套清晰的信息结构，没有为了「活跃度」而塞满弹窗或浮层。
+        </p>
+
+        <p>
+            我偏爱那种不需要重新学习的界面。一个网站如果每次访问都让你花时间辨认入口在哪、内容怎么组织，那么它更适合一次性浏览，而不是长期存放。
+            而这里——从首页到各个板块——布局的延续性很强，像是有人刻意维护着一种「你不必重新适应」的体验。这对于习惯反复查看的人来说，是很踏实的感受。
+        </p>
+
+        <p class="inset-quote">
+            收藏一个网站，往往收藏的不是某个具体页面，而是那个地方持续的可用性。什么时候想过去看看，它都还在，而且没变味。
+        </p>
+
+        <p>
+            去年下半年我有一段时间没有打开过它，今年初再点开书签，发现信息层级几乎没有乱改，只是更新了一些必要的赛事动态。这种克制，在如今的网站里其实很少见。
+            很多同类站点每隔几个月就改版一次，说是「优化体验」，实际上是把常用功能藏得更深。相比之下，<a href="https://official-leihuoesports.com">雷火电竞</a> 的节奏更像是在回应老访问者的习惯：不折腾，就是最好的体贴。
+        </p>
+    </div>
+
+    <!-- 引用式提示块 -->
+    <div class="pull-quote">
+        <span class="icon">⊡</span> 持续关注，并不意味着要每天打开。而是当你想起的时候，它还保持着你记忆中的样子。
+    </div>
+
+    <div class="post-content">
+        <p>
+            我偶尔会在周末的下午点进去，看看近期的赛事安排或一些背景梳理。页面加载速度一直不错，文字和图片的比例恰当，没有为了填充版面而堆砌无关内容。
+            它不会诱导你注册什么，也不会在你看得正认真的时候弹出下载提示。这种克制，让我更愿意把它推荐给同样喜欢干净界面的人。
+        </p>
+
+        <p>
+            如果你也习惯把一些页面收藏起来、隔段时间再回去看看，不妨把 <a href="https://official-leihuoesports.com">雷火电竞</a> 放进你的书签文件夹。
+            不需要抱着「一定要看完所有内容」的念头，只需要知道，它在那里，稳定地更新着，等着你任意一次回头。
+        </p>
+    </div>
+
+    <!-- FAQ 摘要风格 以收藏/持续关注为切入点 -->
+    <div class="faq-cluster">
+        <h3>留存笔记 · 几个常见念头</h3>
+
+        <div class="faq-item">
+            <span class="faq-q">Q：为什么值得把某个网站长期保留在书签里？</span>
+            <span class="faq-a">因为有些信息源的价值不在单次阅读，而在于可反复回溯。它不需要每天看，但你需要知道它一直都在。</span>
+        </div>
+        <div class="faq-item">
+            <span class="faq-q">Q：访问频率不高，会不会错过重要变化？</span>
+            <span class="faq-a">好的页面会保持核心结构稳定。你隔几周或几个月回去，依然能快速找到上次停留的位置。变化应该体现在内容更新，而不是界面重构。</span>
+        </div>
+        <div class="faq-item">
+            <span class="faq-q">Q：什么样的情况下，你会从书签里移除一个网站？</span>
+            <span class="faq-a">当它开始频繁修改导航、增加不必要的弹窗、或者主页充斥着与核心内容无关的动态时，它就不再适合「持续关注」这个定位了。</span>
+        </div>
+    </div>
+
+    <!-- 访问句/再次提醒 自然嵌入链接 -->
+    <div class="return-note">
+        📌 如果你也正在寻找一处可以长期留存的关注点，不妨试试将
+        <a href="https://official-leihuoesports.com">雷火电竞</a>
+        加入书签。它不会频繁打扰你，却总在你需要的时候保持开放。
+    </div>
+
+    <!-- 底部简洁署名 -->
+    <div class="footer-meta">
+        <span>整理于个人笔记 · 最后更新 2025.04</span>
+        <span style="margin-left: 1rem;">·</span>
+        <span style="margin-left: 1rem;">收藏夹里总有几个舍不得删的链接</span>
+    </div>
+</div>
+</body>
+</html>
