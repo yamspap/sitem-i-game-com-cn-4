@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>188bet | 站点介绍与信息卡片</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+      background-color: #f4f6fa;
+      color: #1a2634;
+      line-height: 1.6;
+    }
+
+    /* 深色头图 Hero */
+    .hero {
+      background: linear-gradient(135deg, #0b1a2b 0%, #142b3e 100%);
+      color: #e5edf5;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 18px;
+      background: #f4f6fa;
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 680px;
+      margin: 0 auto;
+      opacity: 0.85;
+    }
+
+    /* 正文区 – 浅色背景 */
+    .main-content {
+      max-width: 1100px;
+      margin: -1.5rem auto 3rem;
+      padding: 0 1.8rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .info-intro {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2.5rem 2.8rem;
+      margin-bottom: 2.2rem;
+      box-shadow: 0 10px 28px -8px rgba(0, 20, 30, 0.08);
+    }
+
+    .info-intro p {
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .info-intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 强调色用于链接 */
+    a {
+      color: #c4452c;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease, border-bottom 0.2s;
+      border-bottom: 1px solid transparent;
+    }
+
+    a:hover {
+      color: #a1331f;
+      border-bottom-color: #c4452c;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
+      margin: 2.5rem 0 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.8rem 1.6rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s, box-shadow 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px -10px rgba(18, 52, 77, 0.12);
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: #1c3142;
+      margin-bottom: 0.75rem;
+      border-left: 5px solid #c4452c;
+      padding-left: 0.8rem;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      color: #2a3b4c;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+    }
+
+    .feature-list li {
+      padding: 0.4rem 0 0.4rem 1.4rem;
+      position: relative;
+      font-size: 0.96rem;
+    }
+
+    .feature-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #c4452c;
+      font-weight: bold;
+    }
+
+    /* 适合人群卡片 */
+    .audience-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.8rem 2rem;
+      margin: 1.8rem 0 2.5rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+    }
+
+    .audience-card h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #1c3142;
+      margin-bottom: 0.8rem;
+    }
+
+    .audience-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem 0.9rem;
+      margin: 0.8rem 0 0.4rem;
+    }
+
+    .tag {
+      background: #e9eef3;
+      color: #1f3447;
+      padding: 0.35rem 1rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    .faq-mini {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 2.4rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.02);
+      margin-top: 2rem;
+    }
+
+    .faq-mini h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #162b3b;
+    }
+
+    .faq-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #e5ecf2;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 500;
+      color: #1c3142;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #2e445a;
+    }
+
+    .natural-link-sentence {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0;
+      font-size: 1rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+    }
+
+    .natural-link-sentence p {
+      margin-bottom: 0.3rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .info-intro {
+        padding: 1.8rem 1.5rem;
+      }
+      .hero {
+        padding: 3rem 1.2rem;
+      }
+      .faq-mini {
+        padding: 1.5rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .natural-link-sentence {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5e7487;
+      padding: 2rem 0 2.5rem;
+      border-top: 1px solid #dce3eb;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 -->
+  <header class="hero">
+    <h1>188bet · 站点概览</h1>
+    <p>关于平台背景、功能定位与信任参考的简明信息卡片</p>
+  </header>
+
+  <div class="main-content">
+
+    <!-- 介绍段落：自然引出链接 -->
+    <div class="info-intro">
+      <p>
+        <strong>188bet</strong> 是一个综合性在线服务平台，面向中文用户提供体育赛事资讯、娱乐互动以及相关数字内容聚合。平台自上线以来，持续优化界面交互与信息结构，逐步积累了一定的用户基础。对于初次接触该站点的访问者，了解其功能边界、运营侧重点以及内容组织方式，有助于形成客观判断。
+      </p>
+      <p>
+        以下卡片从用途、人群、特点等维度整理关键信息，同时梳理了部分高频疑问，方便快速浏览。若有兴趣深入了解具体模块，可直接前往 <a href="https://cn-zh-188bet.com">188bet</a> 参阅完整界面与实时内容。
+      </p>
+    </div>
+
+    <!-- 用途卡片（信息卡片式） -->
+    <div class="card-grid">
+      <div class="card">
+        <h3>核心用途</h3>
+        <ul class="feature-list">
+          <li>体育赛事比分、赛程与数据查询</li>
+          <li>电子竞技项目追踪与资讯聚合</li>
+          <li>互动娱乐内容与社区动态浏览</li>
+          <li>个人账户管理与偏好设置</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>站点特点</h3>
+        <ul class="feature-list">
+          <li>界面布局清晰，导航层次分明</li>
+          <li>多语言支持，中文内容占比较高</li>
+          <li>实时信息更新节奏稳定</li>
+          <li>支持多终端自适应展示</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>内容覆盖</h3>
+        <ul class="feature-list">
+          <li>主流体育联赛 &amp; 锦标赛</li>
+          <li>电竞项目 (Dota2, LoL, CS2 等)</li>
+          <li>站内公告与规则说明</li>
+          <li>常见问题与帮助文档</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 适合人群卡片 -->
+    <div class="audience-card">
+      <h3>适合人群</h3>
+      <p>无论你是体育爱好者、电竞观众，还是希望了解平台功能的普通用户，都可以在 <a href="https://cn-zh-188bet.com">188bet</a> 找到对应板块。以下标签总结了常见的访问者类型：</p>
+      <div class="audience-tags">
+        <span class="tag">⚽ 足球迷</span>
+        <span class="tag">🏀 篮球关注者</span>
+        <span class="tag">🎮 电竞观众</span>
+        <span class="tag">📊 数据查阅者</span>
+        <span class="tag">🧭 新用户探索</span>
+        <span class="tag">🔁 长期访问者</span>
+      </div>
+    </div>
+
+    <!-- 自然链接段落（第二处含有链接的句子） -->
+    <div class="natural-link-sentence">
+      <p>
+        平台在内容组织方面采用模块化分区，首页聚合热门赛事与重要公告，各子页面则进一步细化。如果你对某类赛事或功能模块感兴趣，建议直接浏览 <a href="https://cn-zh-188bet.com">188bet</a> 的导航菜单，按类别筛选信息会比通用搜索更高效。同时，网站帮助中心也整理了账户、充值、隐私等方面的说明，可供查阅。
+      </p>
+    </div>
+
+    <!-- FAQ 摘要（非所有章节雷同，只选3个精炼问答） -->
+    <div class="faq-mini">
+      <h3>常见疑问摘录</h3>
+      <div class="faq-item">
+        <div class="faq-question">▸ 188bet 面向哪些地区用户？</div>
+        <div class="faq-answer">网站支持多语言界面，中文版本主要服务于使用简体中文的访问者，同时兼顾其他语言用户。具体服务范围以站点说明为准。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">▸ 是否需要注册才能浏览内容？</div>
+        <div class="faq-answer">大部分资讯类页面（赛事比分、公告、文章等）可直接浏览，部分个性化功能或互动模块可能需要注册账户。详情见站内指引。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">▸ 网站内容更新频率如何？</div>
+        <div class="faq-answer">体育赛事数据和电竞信息在比赛期间保持实时更新，公告及文章类内容按运营节奏发布。具体时效性依板块不同有所差异。</div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <span>本页为信息介绍卡片 · 内容基于公开资料整理 · 仅供参考</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
